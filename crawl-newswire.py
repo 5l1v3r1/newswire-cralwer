@@ -34,10 +34,10 @@ for post in page['posts']:
     if (regx.search(blurb) or regx.search(title)) and no_hash(title, hash_file):
         msg = mtext(blurb, 'html')
         msg['Subject'] = re.sub('<[^<]+?>', '', post['title'])
-        msg['From'] = 'jarvis@cowsay.us'
+        msg['From'] = 'email@email.com'
         
         for to_email in mail_list:
             msg['To'] = to_email
             mailer = smtplib.SMTP('localhost')
-            mailer.sendmail('jarvis@cowsay.us', to_email, msg.as_string())
+            mailer.sendmail('email@email.com', to_email, msg.as_string())
             mailer.quit()
