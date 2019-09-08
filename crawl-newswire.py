@@ -24,7 +24,7 @@ data = rget('https://www.rockstargames.com/newswire/tags.json?tags=702')
 page = data.json()
 regx = re.compile('GTA\$[1-10]')
 
-mail_list = [ 'moroccanhashish@gmail.com', 'paulwarwick090@gmail.com' ]
+mail_list = [ 'email@email.com' ]
 
 for post in page['posts']:
     blurb = post['blurb']
